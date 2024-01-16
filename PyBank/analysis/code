@@ -1,0 +1,12 @@
+import os
+
+# Module for reading CSV files
+import csv
+
+#set file path
+csvpath = os.path.join("..", "Resources", "budget_data.csv")
+# with open(csvpath) as budget_file:
+    #for row in budget_file
+with open(csvpath,"r") as f:
+    reader = csv.reader(f,delimiter = ",")
+    line_count = sum(1 for line in f)
